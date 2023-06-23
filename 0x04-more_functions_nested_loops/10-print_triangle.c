@@ -16,7 +16,7 @@ void print_triangle(int size)
 		{
 			for (b = a; b < size; b++)
 			{
-				_putchat('');
+				_putchar('~');
 			}
 			for (b = a; b <= size; b++)
 			{
