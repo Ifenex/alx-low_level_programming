@@ -3,7 +3,7 @@
  * _strncat - concatenates two strings.
  * @dest: first string
  * @src: second string
- * Return: point
+ * Return: dest
  * @n: null
  */
 char *_strncat(char *dest, char *src, int n)
@@ -21,7 +21,8 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		dest[a] = src[b];
 		a++;
-		b++
+		b++;
 	}
 	dest[a] = '\0';
 	return (dest);
+}
