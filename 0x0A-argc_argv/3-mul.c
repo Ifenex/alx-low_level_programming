@@ -61,6 +61,7 @@ int main(int argc, char *argv[])
 	k = _atoi(argv[1]);
 	j = _atoi(argv[2]);
 	mul = k * j;
+
 	printf("%d\n", mul);
 
 	return (0);
