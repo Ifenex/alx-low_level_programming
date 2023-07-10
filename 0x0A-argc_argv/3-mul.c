@@ -53,6 +53,7 @@ int _atoi(char *s)
 int main(int argc, char *argv[])
 {
 	int mul, k, j;
+
 	if (argc < 3 || argc > 3)
 	{
 		printf("Error\n");
