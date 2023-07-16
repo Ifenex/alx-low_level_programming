@@ -1,5 +1,29 @@
-#include "stdlib.h"
+#include <stdlib.h>
 #include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+/**
+ * check_num - check string in digit
+ * @st: array of string
+ *
+ * Return: Always 0
+ */
+int check_num(char *st)
+{
+	unsigned int c;
+
+	c = 0;
+	while (c < strlen(st))
+	{
+		if (!isdigit(st[c]))
+		{
+			return (0);
+		}
+		c++;
+	}
+	return (1);
+}
+
 /**
  * main - add numbers
  * @argc: numbeer of arg
@@ -8,23 +32,23 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, j, sum = 0;
-
-	j = 0;
-	for (i = 1; i < argc; i++)
+	int c, j, sum = 0;
+	
+	c = 1;
+	while (c < argc)
 	{
-		if (!(j >= 0 && j <= -1))
+		if (check_num(argv[c]))
 		{
-			printf("Error\n");
-			return (1);
-		}
-		else if (argv == 0)
-		{
-			printf("0\n");
+			j = atoi(argv[c]);
+			sum += j;
 		}
 		else
-			sum += atoi(argv[i]);
-		printf("sum is %d\n", sum);
+		{
+			printf("Erro\n");
+			return (1);
+		}
+		c++;
 	}
+	printf("%d\n", sum);
 	return (0);
 }
